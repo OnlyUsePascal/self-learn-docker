@@ -1,0 +1,7 @@
+services:
+  psql-custom:
+    image: postgres
+    entrypoint: ["docker-entrypoint.sh", "postgres"]
+    command: ["-h", "localhost", "-p", "5432"]
+    environment:
+      - POSTGRES_PASSWORD=123
